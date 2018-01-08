@@ -1,0 +1,37 @@
+{% block body %}
+ 
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <div id="chart_div"  style="width: 900px; height: 300px;"><div>
+ 
+ 
+<script type='text/javascript'>//<![CDATA[ 
+ 
+google.load('visualization', '1', {packages: ['corechart']});
+google.setOnLoadCallback(drawBasic);
+ 
+function drawBasic() {
+ 
+      var data = google.visualization.arrayToDataTable({{ arraydata | tojson }});
+ 
+      var options = {
+        title: 'Total spending and avg ticket size',
+        chartArea: {width: '50%'},
+        hAxis: {
+          title: '',
+          minValue: 0
+        },
+        vAxis: {
+          title: ''
+        }
+      };
+ 
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+ 
+      chart.draw(data, options);
+    }
+//]]>  
+ 
+</script>
+ 
+ 
+{% endblock %}

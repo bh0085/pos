@@ -1,0 +1,8 @@
+README.md
+setup.py
+AERONAUT_pos.egg-info/PKG-INFO
+AERONAUT_pos.egg-info/SOURCES.txt
+AERONAUT_pos.egg-info/dependency_links.txt
+AERONAUT_pos.egg-info/not-zip-safe
+AERONAUT_pos.egg-info/requires.txt
+AERONAUT_pos.egg-info/top_level.txt
